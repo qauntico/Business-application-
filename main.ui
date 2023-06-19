@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1243</width>
-    <height>571</height>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -87,6 +87,9 @@
 	border:1px solid #a1a1a1;
 	border-radius: 1px;
 	padding:5px
+}
+#pushButton_7, #pushButton_5, #pushButton_6 {
+	margin-left: 10px
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -125,7 +128,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>249</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
@@ -220,7 +223,7 @@
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(255, 255, 255);
-color:black;</string>
+</string>
                </property>
                <property name="text">
                 <string>Home</string>
@@ -583,7 +586,7 @@ color:black;</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -758,22 +761,7 @@ color:black;</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
-             <item>
-              <widget class="QPushButton" name="pushButton_13">
-               <property name="toolTip">
-                <string>Minimize</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="icons/icons.qrc">
-                 <normaloff>:/icons/minus.svg</normaloff>:/icons/minus.svg</iconset>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <layout class="QHBoxLayout" name="horizontalLayout_4"/>
            </widget>
           </item>
          </layout>
@@ -821,7 +809,7 @@ color:black;</string>
              <item>
               <widget class="QStackedWidget" name="stackedWidget_3">
                <property name="currentIndex">
-                <number>3</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="page_6">
                 <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -1405,6 +1393,27 @@ padding-left: 10px;</string>
                  </item>
                 </layout>
                </widget>
+               <widget class="QWidget" name="page_12">
+                <layout class="QVBoxLayout" name="verticalLayout_38">
+                 <item>
+                  <widget class="QLabel" name="label_42">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Purchase Order</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
                <widget class="QWidget" name="page_7">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
                  <item>
@@ -1675,7 +1684,7 @@ padding-left: 10px;</string>
                           </font>
                          </property>
                          <property name="text">
-                          <string>List Of Stocks</string>
+                          <string>Suppliers</string>
                          </property>
                         </widget>
                        </item>

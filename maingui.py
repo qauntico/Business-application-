@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1243, 571)
+        MainWindow.resize(1243, 566)
         MainWindow.setStyleSheet("*{\n"
 "    border:none;\n"
 "    background-color:transparent;\n"
@@ -86,6 +86,9 @@ class Ui_MainWindow(object):
 "    border:1px solid #a1a1a1;\n"
 "    border-radius: 1px;\n"
 "    padding:5px\n"
+"}\n"
+"#pushButton_7, #pushButton_5, #pushButton_6 {\n"
+"    margin-left: 10px\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -101,7 +104,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.leftMenuContainer.sizePolicy().hasHeightForWidth())
         self.leftMenuContainer.setSizePolicy(sizePolicy)
         self.leftMenuContainer.setMinimumSize(QtCore.QSize(0, 0))
-        self.leftMenuContainer.setMaximumSize(QtCore.QSize(249, 16777215))
+        self.leftMenuContainer.setMaximumSize(QtCore.QSize(300, 16777215))
         self.leftMenuContainer.setObjectName("leftMenuContainer")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -121,7 +124,8 @@ class Ui_MainWindow(object):
         self.menuBtn = QtWidgets.QPushButton(parent=self.frame)
         self.menuBtn.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("icons/align-justify.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.icon = "icons/align-justify.svg"
+        icon.addPixmap(QtGui.QPixmap(self.icon), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.menuBtn.setIcon(icon)
         self.menuBtn.setIconSize(QtCore.QSize(24, 24))
         self.menuBtn.setObjectName("menuBtn")
@@ -141,7 +145,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.pushButton_2 = QtWidgets.QPushButton(parent=self.frame_2)
         self.pushButton_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color:black;")
+"")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("icons/home.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButton_2.setIcon(icon1)
@@ -372,13 +376,6 @@ class Ui_MainWindow(object):
         self.frame_7.setObjectName("frame_7")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_7)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.pushButton_13 = QtWidgets.QPushButton(parent=self.frame_7)
-        self.pushButton_13.setText("")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("icons/minus.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_13.setIcon(icon13)
-        self.pushButton_13.setObjectName("pushButton_13")
-        self.horizontalLayout_4.addWidget(self.pushButton_13)
         self.horizontalLayout_5.addWidget(self.frame_7, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.verticalLayout_10.addWidget(self.headerContainer)
         self.mainBodyContent = QtWidgets.QWidget(parent=self.mainBodyContainer)
@@ -574,9 +571,9 @@ class Ui_MainWindow(object):
         self.pushButton_15 = QtWidgets.QPushButton(parent=self.frame_13)
         self.pushButton_15.setStyleSheet("padding-right:10px;\n"
 "padding-left: 10px;")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("icons/arrow-right.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_15.setIcon(icon14)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap("icons/arrow-right.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_15.setIcon(icon13)
         self.pushButton_15.setIconSize(QtCore.QSize(24, 24))
         self.pushButton_15.setObjectName("pushButton_15")
         self.horizontalLayout_17.addWidget(self.pushButton_15, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -707,6 +704,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_16.addWidget(self.widget_3)
         self.verticalLayout_15.addWidget(self.widget_2)
         self.stackedWidget_3.addWidget(self.page_6)
+        self.page_12 = QtWidgets.QWidget()
+        self.page_12.setObjectName("page_12")
+        self.verticalLayout_38 = QtWidgets.QVBoxLayout(self.page_12)
+        self.verticalLayout_38.setObjectName("verticalLayout_38")
+        self.label_42 = QtWidgets.QLabel(parent=self.page_12)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_42.setFont(font)
+        self.label_42.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_42.setObjectName("label_42")
+        self.verticalLayout_38.addWidget(self.label_42)
+        self.stackedWidget_3.addWidget(self.page_12)
         self.page_7 = QtWidgets.QWidget()
         self.page_7.setObjectName("page_7")
         self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.page_7)
@@ -736,9 +747,9 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_17.setFont(font)
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("icons/plus.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_17.setIcon(icon15)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("icons/plus.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_17.setIcon(icon14)
         self.pushButton_17.setIconSize(QtCore.QSize(24, 24))
         self.pushButton_17.setObjectName("pushButton_17")
         self.horizontalLayout_26.addWidget(self.pushButton_17, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -873,7 +884,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_11.setFont(font)
-        self.pushButton_11.setIcon(icon15)
+        self.pushButton_11.setIcon(icon14)
         self.pushButton_11.setIconSize(QtCore.QSize(24, 24))
         self.pushButton_11.setObjectName("pushButton_11")
         self.horizontalLayout_22.addWidget(self.pushButton_11, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -1008,7 +1019,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_18.setFont(font)
-        self.pushButton_18.setIcon(icon15)
+        self.pushButton_18.setIcon(icon14)
         self.pushButton_18.setIconSize(QtCore.QSize(24, 24))
         self.pushButton_18.setObjectName("pushButton_18")
         self.horizontalLayout_30.addWidget(self.pushButton_18, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -1205,8 +1216,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
-        self.stackedWidget_3.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget_3.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1239,7 +1250,6 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Help"))
         self.label_5.setText(_translate("MainWindow", "Stock Management "))
         self.pushButton_14.setToolTip(_translate("MainWindow", "View Users"))
-        self.pushButton_13.setToolTip(_translate("MainWindow", "Minimize"))
         self.label_8.setText(_translate("MainWindow", "0"))
         self.label_15.setText(_translate("MainWindow", "Inventory Value"))
         self.label_16.setText(_translate("MainWindow", "0"))
@@ -1260,12 +1270,13 @@ class Ui_MainWindow(object):
         self.label_28.setText(_translate("MainWindow", "Total Orders"))
         self.label_29.setText(_translate("MainWindow", "0"))
         self.label_31.setText(_translate("MainWindow", "Pending Orders"))
+        self.label_42.setText(_translate("MainWindow", "Purchase Order"))
         self.label_11.setText(_translate("MainWindow", "Products"))
         self.pushButton_17.setText(_translate("MainWindow", "Add New"))
         self.label_35.setText(_translate("MainWindow", "Show "))
         self.label_36.setText(_translate("MainWindow", "Entries"))
         self.label_37.setText(_translate("MainWindow", "Search:"))
-        self.label_10.setText(_translate("MainWindow", "List Of Stocks"))
+        self.label_10.setText(_translate("MainWindow", "Suppliers"))
         self.pushButton_11.setText(_translate("MainWindow", "Add New"))
         self.label_32.setText(_translate("MainWindow", "Show "))
         self.label_33.setText(_translate("MainWindow", "Entries"))
@@ -1282,4 +1293,11 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "Profile"))
 
 
-
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())
